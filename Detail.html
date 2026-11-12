@@ -1,0 +1,367 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Domácí hlídač - Detail položky</title>
+
+    <link rel="icon"
+          href="obrazky/Pes.png">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            Domácí hlídač
+        </div>
+
+        <nav class="menu">
+
+            <a href="Dashboard.html">
+                Přehled
+            </a>
+
+            <a href="Majetek.html"
+               class="active">
+                Majetek
+            </a>
+
+            <a href="#">
+                Záruky
+            </a>
+
+            <a href="#">
+                Dokumenty
+            </a>
+
+            <a href="#">
+                Reklamace
+            </a>
+
+            <a href="#">
+                Kamery
+            </a>
+
+            <a href="#">
+                Nastavení
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <main class="content">
+
+        <div class="header">
+
+            <h1 id="detail-name">
+                Načítání...
+            </h1>
+
+            <div class="subtitle">
+                Detail položky
+            </div>
+
+        </div>
+
+        <!-- ZOBRAZENÍ DETAILU -->
+
+        <div
+            class="panel"
+            id="detail-view">
+
+            <div class="detail-header">
+
+                <h2>
+                    Základní informace
+                </h2>
+
+                <button
+                    id="edit-asset"
+                    class="icon-button">
+
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+
+                        <path d="M12 20h9"></path>
+
+                        <path d="M16.5 3.5a2.12 2.12 0 1 1 3 3L7 19l-4 1 1-4 12.5-12.5z"></path>
+
+                    </svg>
+
+                </button>
+
+            </div>
+
+            <p>
+                Kategorie:
+                <strong id="detail-category"></strong>
+            </p>
+
+            <br>
+
+            <p>
+                Cena:
+                <strong id="detail-price"></strong>
+            </p>
+
+            <br>
+
+            <p>
+                Datum nákupu:
+                <strong id="detail-date"></strong>
+            </p>
+
+            <br>
+
+            <p>
+                Prodejce:
+                <strong id="detail-seller"></strong>
+            </p>
+
+            <br>
+
+            <p>
+                Sériové číslo:
+                <strong id="detail-serial"></strong>
+            </p>
+
+            <br>
+
+            <p>
+                Poznámka:
+                <strong id="detail-note"></strong>
+            </p>
+
+            <br>
+
+            <p>
+                Délka záruky:
+                <strong id="detail-warranty"></strong>
+            </p>
+
+            <p
+                id="save-message"
+                class="save-message hidden">
+
+                ✅ Položka byla úspěšně uložena.
+
+            </p>
+
+        </div>
+
+        <!-- EDITACE VE STEJNÉM MÍSTĚ -->
+
+        <div
+            class="panel hidden"
+            id="edit-view">
+
+            <div class="detail-header">
+
+                <h2>
+                    Úprava položky
+                </h2>
+
+                <button
+                    id="cancel-edit"
+                    class="icon-button">
+
+                    ✕
+
+                </button>
+
+            </div>
+
+            <div class="edit-row">
+
+                <label>Název:</label>
+
+                <input
+                    type="text"
+                    id="edit-name">
+
+            </div>
+
+            <div class="edit-row">
+
+                <label>Kategorie:</label>
+
+                <input
+                    type="text"
+                    id="edit-category">
+
+            </div>
+
+            <div class="edit-row">
+
+                <label>Cena:</label>
+
+                <input
+                    type="number"
+                    id="edit-price">
+
+            </div>
+
+            <div class="edit-row">
+
+                <label>Měna:</label>
+
+                <select id="edit-currency">
+
+                    <option value="Kč">Kč</option>
+
+                    <option value="€">€</option>
+
+                    <option value="$">$</option>
+
+                    <option value="PLN">Zł</option>
+
+                </select>
+
+            </div>
+
+            <div class="edit-row">
+
+                <label>Datum nákupu:</label>
+
+                <input
+                    type="date"
+                    id="edit-date">
+
+            </div>
+
+            <div class="edit-row">
+
+                <label>Záruka:</label>
+
+                <input
+                    type="number"
+                    id="edit-warranty">
+
+            </div>
+
+            <div class="edit-row">
+
+                <label>Prodejce:</label>
+
+                <input
+                    type="text"
+                    id="edit-seller">
+
+            </div>
+
+            <div class="edit-row">
+
+                <label>Sériové číslo:</label>
+
+                <input
+                    type="text"
+                    id="edit-serial">
+
+            </div>
+
+            <div class="edit-row edit-row-note">
+
+                <label>Poznámka:</label>
+            
+                <textarea
+                    id="edit-note"></textarea>
+
+            </div>
+
+            <div class="edit-actions">
+
+                <button id="save-edit">
+
+                    Uložit změny
+
+                </button>
+
+                <button id="delete-asset">
+
+                    Smazat položku
+
+                </button>
+
+</div>
+
+        </div>
+
+<div id="save-toast" class="save-toast hidden">
+    ✅ Položka byla úspěšně uložena
+</div>
+
+<div
+    id="delete-modal"
+    class="modal hidden">
+
+    <div class="modal-content">
+
+        <h2>
+            Smazat položku
+        </h2>
+
+        <p class="delete-message">
+            Opravdu chcete smazat:
+        </p>
+
+        <p
+            id="delete-item-name"
+            class="delete-item-name">
+        </p>
+
+        <p class="delete-warning">
+            Tuto akci nelze vrátit zpět.
+        </p>
+
+        <div class="modal-buttons">
+
+            <button
+                id="cancel-delete">
+
+                Zrušit
+
+            </button>
+
+            <button
+                id="confirm-delete">
+
+                Smazat
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+    </main>
+
+</div>
+
+<script src="detail.js"></script>
+
+</body>
+
+</html>

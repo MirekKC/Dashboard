@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Domácí hlídač - Majetek</title>
+
+    <link rel="icon" href="obrazky/Pes.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            Domácí hlídač
+        </div>
+
+        <nav class="menu">
+
+            <a href="Dashboard.html">Přehled</a>
+
+            <a href="#" class="active">
+                Majetek
+            </a>
+
+            <a href="#">Záruky</a>
+
+            <a href="#">Dokumenty</a>
+
+            <a href="#">Reklamace</a>
+
+            <a href="#">Kamery</a>
+
+            <a href="#">Nastavení</a>
+
+        </nav>
+
+    </aside>
+
+    <main class="content">
+
+        <div class="header">
+
+            <h1>Majetek</h1>
+
+            <div class="subtitle">
+                Přehled evidovaných položek
+            </div>
+
+        </div>
+
+        <div class="assets-header">
+
+            <button
+                class="add-button"
+                id="show-modal">
+
+                + Přidat položku
+
+            </button>
+
+        </div>
+
+        <!-- Popup okno -->
+
+        <div
+            id="asset-modal"
+            class="modal hidden">
+
+            <div class="modal-content">
+
+                <h2>
+                    Přidat položku
+                </h2>
+
+                <p class="required-info">
+                    * Povinné pole
+                </p>
+
+                <input
+                    type="text"
+                    id="asset-name"
+                    placeholder="Název položky *">
+
+                <input
+                    type="text"
+                    id="asset-category"
+                    placeholder="Kategorie *">
+
+                <div class="input-row">
+
+                <input
+                    type="number"
+                    id="asset-price"
+                    placeholder="Cena *">
+
+                <div class="currency-select">
+
+                    <button
+                        type="button"
+                        id="currency-button">
+
+                            Kč
+                    </button>
+
+                <div
+                    id="currency-menu"
+                    class="currency-menu hidden">
+
+                    <div data-value="Kč">Kč</div>
+                    <div data-value="€">€</div>
+                    <div data-value="$">$</div>
+                    <div data-value="PLN">Zł</div>
+
+                </div>
+
+                </div>
+
+                </div>
+
+                <div class="input-row">
+
+                 <input
+                    type="date"
+                    id="asset-date">
+
+                <input
+                    type="number"
+                    id="asset-warranty"
+                    placeholder="Záruka (měsíce) *">
+
+                </div>    
+                
+                <label class="checkbox-row">
+
+                <input
+                    type="checkbox"
+                    id="unknown-date">
+
+                Datum nákupu neznám
+
+                </label>
+                
+                <input
+                    type="text"
+                    id="asset-seller"
+                    placeholder="Prodejce">
+
+                <input
+                    type="text"
+                    id="asset-serial"
+                    placeholder="Sériové číslo">
+
+                <div class="modal-buttons">
+
+                    <button id="save-asset">
+                        Uložit
+                    </button>
+
+                    <button id="close-modal">
+                        Zrušit
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Sem JS vykresluje karty -->
+
+        <div
+            class="assets-grid"
+            id="assets-grid">
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
