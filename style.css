@@ -331,7 +331,8 @@ tr:hover{
 }
 
 .mobile-events{
-    display:none;
+    display:block;
+    background:red;
 }
 
 .mobile-event{
