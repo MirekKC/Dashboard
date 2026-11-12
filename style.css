@@ -94,10 +94,18 @@ body{
 
 @media(max-width:768px){
 
-    .header h1{
-        font-size:32px;
+    .content{
+        width:100%;
+        padding:20px;
+        align-items:center;
+    }
+    table{
+        display:none;
     }
 
+    .mobile-events{
+     display:block;
+    }    
 }
 
 .subtitle{
@@ -127,10 +135,10 @@ body{
 @media(max-width:768px){
 
     .cards{
-        grid-template-columns:
-            repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
+        max-width:600px;
+        margin:0 auto;
     }
-
 }
 
 .card{
@@ -320,6 +328,33 @@ tr:hover{
     .grid{
         grid-template-columns:1fr;
     }
+}
+
+.mobile-events{
+    display:none;
+}
+
+.mobile-event{
+    background:#202b44;
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:15px;
+    margin-bottom:12px;
+}
+
+.mobile-event-title{
+    font-size:18px;
+    font-weight:700;
+    margin-bottom:6px;
+}
+
+.mobile-event-category{
+    color:var(--muted);
+    margin-bottom:6px;
+}
+
+.mobile-event-date{
+    margin-bottom:10px;
 }
 
 /* Podkategorie (Majetek atd.) */
