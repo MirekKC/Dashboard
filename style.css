@@ -288,8 +288,9 @@ tr:hover{
 
 .mobile-events{
     display:none;
+    flex-direction:column;
+    gap:12px;
 }
-
 
 @media(max-width:900px){
 
@@ -328,12 +329,11 @@ tr:hover{
 }
 
 .mobile-event{
-    background:#202b44;
     border:1px solid var(--border);
     border-radius:12px;
     padding:15px;
-    margin-bottom:12px;    
     text-align:center;
+    margin-bottom:0;
 }
 
 .mobile-event-title{
