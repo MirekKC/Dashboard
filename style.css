@@ -93,7 +93,9 @@ body{
 }
 
 @media(max-width:768px){
-
+    body{
+        border:5px solid red;
+    }
     .content{
         width:100%;
         padding:20px;
