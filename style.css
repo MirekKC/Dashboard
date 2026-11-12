@@ -304,7 +304,6 @@ tr:hover{
     .content{
         width:100%;
         padding:20px;
-        align-items:center;
     }
 
     table{
@@ -318,7 +317,14 @@ tr:hover{
     .cards{
         grid-template-columns:repeat(2,1fr);
     }
-
+    
+    .panel{
+    width:100%;
+    }
+    
+    .mobile-event{
+    width:100%;
+    }
 }
 
 .mobile-event{
