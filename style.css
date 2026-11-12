@@ -218,6 +218,10 @@ body{
     flex:1;
 }
 
+.mobile-events{
+    display:none;
+}
+
 @media(max-width:768px){
 
     .grid{
@@ -328,10 +332,6 @@ tr:hover{
     .grid{
         grid-template-columns:1fr;
     }
-}
-
-.mobile-events{
-    display:none;
 }
 
 .mobile-event{
