@@ -104,7 +104,7 @@ body{
     }
 
     .mobile-events{
-     display:block;
+     display:none;
     }    
 }
 
@@ -331,7 +331,7 @@ tr:hover{
 }
 
 .mobile-events{
-    display:block;
+    display:none;
 }
 
 .mobile-event{
@@ -339,11 +339,12 @@ tr:hover{
     border:1px solid var(--border);
     border-radius:12px;
     padding:15px;
-    margin-bottom:12px;
+    margin-bottom:12px;    
+    text-align:center;
 }
 
 .mobile-event-title{
-    font-size:18px;
+    font-size:20px;
     font-weight:700;
     margin-bottom:6px;
 }
@@ -355,6 +356,11 @@ tr:hover{
 
 .mobile-event-date{
     margin-bottom:10px;
+}
+
+.mobile-event .badge{
+    display:inline-block;
+    margin-top:8px;
 }
 
 /* Podkategorie (Majetek atd.) */
