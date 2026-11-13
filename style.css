@@ -284,6 +284,45 @@ tr:hover{
     margin-top:4px;
 }
 
+/* Mobil */
+
+@media(max-width:900px){
+
+    .sidebar{
+        display:none;
+    }
+
+    .grid{
+        flex-direction:column;
+    }
+
+    .content{
+        width:100%;
+        padding:20px;
+    }
+
+    table{
+        display:none;
+    }
+
+    .mobile-events{
+        display:flex;
+        flex-direction:column;
+        border:1px solid var(--border);
+        border-radius:12px;
+        overflow:hidden;
+        margin-top:15px;
+    }
+
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .panel{
+        width:100%;
+    }
+}
+
 /* Podkategorie (Majetek atd.) */
 
 .assets-header{
