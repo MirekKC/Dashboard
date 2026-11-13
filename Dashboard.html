@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Domácí hlídač</title>
+<link rel="icon" href="obrazky/Pes.png">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+<div class="app">
+
+<!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            Domácí hlídač
+        </div>
+
+        <nav class="menu">
+
+<a href="#" class="active"> Přehled </a>
+<a href="Majetek.html">Majetek</a>
+<a href="#"> Záruky </a>
+<a href="#"> Dokumenty </a>
+<a href="#"> Reklamace </a>
+<a href="#"> Kamery </a>
+<a href="#"> Nastavení </a>
+
+
+</nav>
+</aside>
+
+    <main class="content">
+
+        <div class="header">
+            <h1>Přehled domácnosti</h1>
+            <div class="subtitle">
+                Poslední kontrola: dnes
+            </div>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-title">Položky majetku</div>
+                <div class="card-value blue">127</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Aktivní záruky</div>
+                <div class="card-value green">89</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Končí do 90 dní</div>
+                <div class="card-value orange">5</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Otevřené reklamace</div>
+                <div class="card-value red">1</div>
+            </div>
+
+        </div>
+
+        <div class="grid">
+
+            <section class="panel">
+
+                <h2>Nejbližší události</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Položka</th>
+                            <th>Kategorie</th>
+                            <th>Datum</th>
+                            <th>Stav</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Lenovo ThinkPad</td>
+                            <td>Notebook</td>
+                            <td>15.11.2026</td>
+                            <td>
+                                <span class="badge badge-red">
+                                    30 dní
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Myčka Bosch</td>
+                            <td>Domácnost</td>
+                            <td>28.11.2026</td>
+                            <td>
+                                <span class="badge badge-orange">
+                                    43 dní
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Pixel 10</td>
+                            <td>Telefon</td>
+                            <td>12.10.2028</td>
+                            <td>
+                                <span class="badge badge-green">
+                                    V pořádku
+                                </span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+                
+</div>
+
+<div class="events">
+
+    <div class="event">
+
+        <div class="event-title">
+            Lenovo ThinkPad
+        </div>
+
+        <div class="event-category">
+            Notebook
+        </div>
+
+        <div class="event-date">
+            15.11.2026
+        </div>
+
+        <span class="badge badge-red">
+            30 dní
+        </span>
+
+    </div>
+
+    <div class="event">
+
+        <div class="event-title">
+            Myčka Bosch
+        </div>
+
+        <div class="event-category">
+            Domácnost
+        </div>
+
+        <div class="event-date">
+            28.11.2026
+        </div>
+
+        <span class="badge badge-orange">
+            43 dní
+        </span>
+
+    </div>
+
+    <div class="event">
+
+        <div class="event-title">
+            Pixel 10
+        </div>
+
+        <div class="event-category">
+            Telefon
+        </div>
+
+        <div class="event-date">
+            12.10.2028
+        </div>
+
+        <span class="badge badge-green">
+            V pořádku
+        </span>
+
+    </div>
+
+</div>
+
+            </section>                       
+
+            <section class="panel">
+
+                <h2>Upozornění</h2>
+
+                <div class="events">
+
+                    <div class="event">
+                        <div class="event-date">
+                            Priorita vysoká
+                        </div>
+
+                        <div class="event-title">
+                            Končí záruka notebooku
+                        </div>
+
+                        <div class="event-desc">
+                            15.11.2026
+                        </div>
+                    </div>
+
+                    <div class="event">
+                        <div class="event-date">
+                            Reklamace
+                        </div>
+
+                        <div class="event-title">
+                            Kávovar DeLonghi
+                        </div>
+
+                        <div class="event-desc">
+                            Čeká na vyřízení
+                        </div>
+                    </div>
+
+                    <div class="event">
+                        <div class="event-date">
+                            Systém
+                        </div>
+
+                        <div class="event-title">
+                            Nové dokumenty
+                        </div>
+
+                        <div class="event-desc">
+                            3 dokumenty čekají na zpracování
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
