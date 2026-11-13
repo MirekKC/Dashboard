@@ -263,7 +263,6 @@ tr:hover{
 }
 
 .event{
-    background:var(--sidebar);
     border:1px solid var(--border);
     border-radius:12px;
     padding:15px;
@@ -313,13 +312,12 @@ tr:hover{
     }
 
     .mobile-events{
-        display:flex;
-        flex-direction:column;
+        background:var(--sidebar);
         border:1px solid var(--border);
         border-radius:12px;
-        overflow:hidden;
-        margin-top:15px;
-    }
+        padding:15px;
+        text-align:center;
+}
 
     .cards{
         grid-template-columns:repeat(2,1fr);
