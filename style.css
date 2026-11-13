@@ -269,6 +269,12 @@ tr:hover{
     text-align:center;
 }
 
+.event-category{
+    color:var(--muted);
+    margin-top:2px;
+    font-size:14px;
+}
+
 .event-date{
     font-size:13px;
     color:var(--warning);
