@@ -996,3 +996,7 @@ tr:hover{
     background:#374151;
     color:white;
 }
+
+.events{
+    border:5px solid red;
+}
