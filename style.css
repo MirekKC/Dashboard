@@ -314,12 +314,6 @@ tr:hover{
         display:none;
     }
 
-    .mobile-events{
-        background:var(--sidebar);
-        padding:15px;
-        text-align:center;
-}
-
     .cards{
         grid-template-columns:repeat(2,1fr);
     }
@@ -1016,6 +1010,9 @@ tr:hover{
         display:flex;
         flex-direction:column;
         gap:12px;
+
+        width:85%;
+        margin:0 auto;
     }
 
 }
