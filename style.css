@@ -999,3 +999,25 @@ tr:hover{
     background:#374151;
     color:white;
 }
+
+.desktop-events{
+    display:block;
+}
+
+.mobile-events{
+    display:none;
+}
+
+@media(max-width:900px){
+
+    .desktop-events{
+        display:none;
+    }
+
+    .mobile-events{
+        display:flex;
+        flex-direction:column;
+        gap:12px;
+    }
+
+}
