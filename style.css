@@ -260,6 +260,9 @@ tr:hover{
     display:flex;
     flex-direction:column;
     gap:12px;
+
+    width:85%;
+    margin:0 auto;
 }
 
 .event{
@@ -995,8 +998,4 @@ tr:hover{
 #cancel-delete{
     background:#374151;
     color:white;
-}
-
-.events{
-    border:5px solid red;
 }
