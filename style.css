@@ -1014,5 +1014,26 @@ tr:hover{
         width:85%;
         margin:0 auto;
     }
+}
+/* Detail.html - Wrapper (rozdìlovník info vs. dokumenty) */
+.detail-layout{
+    display:grid;
+    grid-template-columns:1fr 350px;
+    gap:30px;
+}
 
+@media(max-width:900px){
+
+    .detail-layout{
+        grid-template-columns:1fr;
+    }
+
+}
+
+#detail-view{
+    background:red !important;
+}
+
+#documents-panel{
+    background:green !important;
 }
