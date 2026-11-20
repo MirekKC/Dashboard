@@ -421,3 +421,5 @@ function showSaveToast() {
         toast.classList.add("hidden");
     }, 3000);
 }
+
+console.log(item);
