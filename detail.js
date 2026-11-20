@@ -65,6 +65,21 @@ const saveMessage =
     document.getElementById(
         "save-message"
     );
+    
+const addDocumentButton =
+    document.getElementById(
+        "add-document"
+    );
+
+const documentUpload =
+    document.getElementById(
+        "document-upload"
+    );
+
+const documentsList =
+    document.getElementById(
+        "documents-list"
+    );
 
 // ======================================================
 // AKTUALIZACE DETAILU
@@ -422,4 +437,14 @@ function showSaveToast() {
     }, 3000);
 }
 
-console.log(item);
+if(addDocumentButton){
+
+    addDocumentButton.addEventListener(
+        "click",
+        function(){
+
+            documentUpload.click();
+
+        }
+    );
+}
