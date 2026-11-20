@@ -75,6 +75,8 @@ const documentUpload =
     document.getElementById(
         "document-upload"
     );
+    
+    console.log(documentUpload);
 
 const documentsList =
     document.getElementById(
