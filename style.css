@@ -519,7 +519,6 @@ tr:hover{
 #close-modal{
 
     background:#374151;
-
     color:white;
 }
 
@@ -533,47 +532,28 @@ tr:hover{
     font-size:12px;
 }
 .modal-content select{
-
     padding:12px;
-
     border-radius:10px;
-
     border:1px solid var(--border);
-
     background:#202b44;
-
     color:white;
-
     font-size:14px;
 
 }
 
 .icon-button{
-
     position:absolute;
-
     top:25px;
-
     right:25px;
-
     background:none;
-
     border:none;
-
     color:var(--primary);
-
     cursor:pointer;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     padding:0;
-
     line-height:1;
-
     transition:.2s;
 
 }
@@ -581,21 +561,22 @@ tr:hover{
 .icon-button:hover{
 
     color:white;
-
     transform:scale(1.1);
 
 }
 
 .detail-header{
-
     display:flex;
-
+    position:relative;
     justify-content:space-between;
-
     align-items:center;
-
     margin-bottom:30px;
 
+}
+
+.detail-header h2{
+    width:100%;
+    text-align:center;
 }
 
 #edit-form input,
@@ -1018,7 +999,7 @@ tr:hover{
 /* Detail.html - Wrapper (rozdìlovník info vs. dokumenty) */
 .detail-layout{
     display:grid;
-    grid-template-columns:1fr 350px;
+    grid-template-columns:65% 35%;
     gap:30px;
 }
 
@@ -1028,12 +1009,4 @@ tr:hover{
         grid-template-columns:1fr;
     }
 
-}
-
-#detail-view{
-    background:red !important;
-}
-
-#documents-panel{
-    background:green !important;
 }
