@@ -500,3 +500,5 @@ console.log(file);
         }
     );
 }
+
+console.log("DETAIL JS VERZE 2");
