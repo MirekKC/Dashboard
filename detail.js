@@ -448,3 +448,53 @@ if(addDocumentButton){
         }
     );
 }
+
+if(documentUpload){
+
+    documentUpload.addEventListener(
+        "change",
+        function(event){
+
+            const file =
+                event.target.files[0];
+
+            if(!file){
+                return;
+            }
+
+            const reader =
+                new FileReader();
+
+            reader.onload =
+                function(e){
+
+                    item.documents.push({
+
+                        id: Date.now(),
+
+                        name: file.name,
+
+                        type: file.type,
+
+                        data: e.target.result
+
+                    });
+
+                    localStorage.setItem(
+                        "assets",
+                        JSON.stringify(
+                            assets
+                        )
+                    );
+
+                    console.log(
+                        item.documents
+                    );
+                };
+
+            reader.readAsDataURL(
+                file
+            );
+        }
+    );
+}
