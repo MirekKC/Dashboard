@@ -462,6 +462,8 @@ if(documentUpload){
                 return;
             }
 
+console.log(file);
+
             const reader =
                 new FileReader();
 
