@@ -146,6 +146,7 @@ function aktualizujDetail(){
 if(item){
 
     aktualizujDetail();
+    vykresliDokumenty();
 
 }
 
@@ -305,7 +306,8 @@ if(saveButton){
                     assets
                 )
             );
-
+            
+            vykresliDokumenty();
             aktualizujDetail();
 
             editView.classList.add(
@@ -503,4 +505,30 @@ console.log(file);
     );
 }
 
-console.log("DETAIL JS VERZE 2");
+function vykresliDokumenty(){
+
+    if(!item.documents ||
+       item.documents.length === 0){
+
+        documentsList.innerHTML = `
+            <p class="documents-empty">
+                Žádné dokumenty nejsou zatím připojené.
+            </p>
+        `;
+
+        return;
+    }
+
+    documentsList.innerHTML = "";
+
+    item.documents.forEach(doc => {
+
+        documentsList.innerHTML += `
+            <div class="document-item">
+
+                📄 ${doc.name}
+
+            </div>
+        `;
+    });
+}
