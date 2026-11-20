@@ -403,13 +403,10 @@ tr:hover{
 /* Barevný štítek pro jednotlivé karty */
 .asset-category{
     display:inline-block;
-
     background:rgba(59,130,246,.15);
     color:var(--primary);
-
     padding:5px 12px;
     border-radius:999px;
-
     margin-bottom:20px;
 }
 
@@ -417,13 +414,9 @@ tr:hover{
 
 .asset-status{
     margin-top:15px;
-
     padding:6px 12px;
-
     border-radius:999px;
-
     display:inline-block;
-
     font-size:13px;
     font-weight:600;
 }
@@ -435,89 +428,59 @@ tr:hover{
 
 
 .modal{
-
     position:fixed;
-
     inset:0;
-
     display:flex;
-
     justify-content:center;
     align-items:center;
-
     background:rgba(0,0,0,.75);
-
     z-index:9999;
 }
 .modal-content{
-
     width:500px;
     max-width:90vw;
-
     background:var(--card);
-
     border:1px solid var(--border);
-
     border-radius:20px;
-
     padding:25px;
-
     display:flex;
     flex-direction:column;
-
     gap:15px;
 }
 
 .modal-content h2{
-
     text-align:center;
-
     margin-bottom:10px;
 }
 
 .modal-content input{
-
     padding:12px;
-
     border-radius:10px;
-
     border:1px solid var(--border);
-
     background:#202b44;
-
     color:white;
 }
 
 .modal-buttons{
-
     display:flex;
-
     justify-content:center;
-
     gap:12px;
-
     margin-top:10px;
 }
 
 .modal-buttons button{
-
     padding:12px 20px;
-
     border:none;
-
     border-radius:10px;
-
     cursor:pointer;
 }
 
 #save-asset{
     background:var(--primary);
-
     color:white;
 }
 
 #close-modal{
-
     background:#374151;
     color:white;
 }
@@ -538,7 +501,6 @@ tr:hover{
     background:#202b44;
     color:white;
     font-size:14px;
-
 }
 
 .icon-button{
@@ -547,6 +509,7 @@ tr:hover{
     right:25px;
     background:none;
     border:none;
+    font-size:32px;
     color:var(--primary);
     cursor:pointer;
     display:flex;
@@ -555,14 +518,12 @@ tr:hover{
     padding:0;
     line-height:1;
     transition:.2s;
-
 }
 
 .icon-button:hover{
 
     color:white;
     transform:scale(1.1);
-
 }
 
 .detail-header{
@@ -571,7 +532,6 @@ tr:hover{
     justify-content:space-between;
     align-items:center;
     margin-bottom:30px;
-
 }
 
 .detail-header h2{
@@ -581,219 +541,132 @@ tr:hover{
 
 #edit-form input,
 #edit-form textarea{
-
     width:100%;
-
     padding:12px;
-
     border-radius:10px;
-
     border:1px solid var(--border);
-
     background:#202b44;
-
     color:white;
-
 }
 
 #edit-form textarea{
-
     min-height:120px;
-
     resize:vertical;
-
 }
 
 
 #edit-view input,
 #edit-view select,
 #edit-view textarea{
-
     width:100%;
-
     padding:12px;
-
     border:1px solid var(--border);
-
     border-radius:10px;
-
     background:#202b44;
-
     color:var(--text);
-
     font-size:15px;
-
 }
 
 #edit-view input:focus,
 #edit-view select:focus,
 #edit-view textarea:focus{
-
     outline:none;
-
     border-color:var(--primary);
-
     box-shadow:
         0 0 0 3px rgba(59,130,246,.25);
-
 }
 
 #edit-view textarea{
-
     min-height:120px;
-
     resize:vertical;
-
 }
 
 
 .edit-row{
-
     display:flex;
-
     align-items:center;
-
     gap:15px;
-
     margin-bottom:12px;
-
 }
 
 .edit-row label{
-
     width:140px;
-
     color:var(--muted);
-
     font-weight:600;
-
     flex-shrink:0;
-
 }
 
 .edit-row input,
 .edit-row select{
-
     flex:1;
-
     padding:8px 12px;
-
     border:1px solid var(--border);
-
     border-radius:8px;
-
     background:#202b44;
-
     color:white;
-
 }
 
 .edit-row-note{
-
     align-items:flex-start;
-
 }
 
 .edit-row textarea{
-
     flex:1;
-
     min-height:110px;
-
     padding:12px;
-
     border:1px solid var(--border);
-
     border-radius:8px;
-
     background:#202b44;
-
     color:white;
-
 }
 
-
 .save-message{
-
     margin-top:20px;
-
     padding:12px;
-
     border-radius:10px;
-
     background:rgba(34,197,94,.15);
-
     color:var(--success);
-
     font-weight:600;
-
 }
 
 .edit-actions{
-
     display:flex;
-
     justify-content:center;
-
     gap:16px;
-
     margin-top:25px;
-
     padding-top:20px;
-
     border-top:1px solid var(--border);
-
 }
 
 #save-edit,
 #delete-asset{
-
     min-width:220px;
-
     padding:14px 24px;
-
     border:none;
-
     border-radius:12px;
-
     cursor:pointer;
-
     font-size:16px;
-
     font-weight:600;
-
     transition:.2s;
 }
 
 #save-edit{
-
     background:var(--primary);
-
     color:white;
-
 }
 
 #save-edit:hover{
-
     transform:translateY(-2px);
-
     background:#2563eb;
-
 }
 
 #delete-asset{
-
     background:var(--danger);
-
     color:white;
-
 }
 #delete-asset:hover{
-
     transform:translateY(-2px);
-
     background:#dc2626;
-
 }
 
 .save-toast{
@@ -868,22 +741,16 @@ tr:hover{
 #currency-button{
     width:100%;
     height:100%;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     border:1px solid var(--border);
     border-radius:12px;
-
     background:#202b44;
     color:white;
-
     font-size:15px;
     font-weight:600;
-
     cursor:pointer;
-
     position:relative;
 }
 
@@ -893,28 +760,20 @@ tr:hover{
 
 .currency-menu{
     position:absolute;
-
     top:55px;
     left:0;
-
     width:100%;
-
     background:#202b44;
-
     border:1px solid var(--border);
     border-radius:12px;
-
     overflow:hidden;
-
     z-index:10000;
 }
 
 .currency-menu div{
     padding:12px;
     text-align:center;
-
     cursor:pointer;
-
     transition:.2s;
 }
 
@@ -924,18 +783,13 @@ tr:hover{
 
 #currency-button::after{
     content:"";
-
     position:absolute;
-
     right:16px;
     top:50%;
-
     width:8px;
     height:8px;
-
     border-right:2px solid white;
     border-bottom:2px solid white;
-
     transform:
         translateY(-70%)
         rotate(45deg);
@@ -991,7 +845,6 @@ tr:hover{
         display:flex;
         flex-direction:column;
         gap:12px;
-
         width:85%;
         margin:0 auto;
     }
@@ -999,7 +852,7 @@ tr:hover{
 /* Detail.html - Wrapper (rozdìlovník info vs. dokumenty) */
 .detail-layout{
     display:grid;
-    grid-template-columns:65% 35%;
+    grid-template-columns:62% 32%;
     gap:30px;
 }
 
@@ -1008,5 +861,4 @@ tr:hover{
     .detail-layout{
         grid-template-columns:1fr;
     }
-
 }
