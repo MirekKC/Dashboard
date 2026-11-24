@@ -123,7 +123,7 @@ const pixel = {
 
     purchaseDate: "2026-10-12",
 
-    warrantyMonths: 24
+    warrantyMonths: 24,
     
     documents: [],
     photos: []
@@ -150,7 +150,7 @@ const lenovo = {
 
     purchaseDate: "2026-11-15",
 
-    warrantyMonths: 24
+    warrantyMonths: 24,
     
     documents: [],
     photos: []
@@ -177,7 +177,7 @@ const bosch = {
 
     purchaseDate: "2026-08-28",
 
-    warrantyMonths: 24
+    warrantyMonths: 24,
     
     documents: [],
     photos: []
@@ -204,7 +204,7 @@ const samsung = {
 
     purchaseDate: "2026-05-01",
 
-    warrantyMonths: 24
+    warrantyMonths: 24,
     
     documents: [],
     photos: []
