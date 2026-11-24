@@ -125,7 +125,8 @@ const pixel = {
 
     warrantyMonths: 24
     
-    documents: []
+    documents: [],
+    photos: []
 
 };
 
@@ -151,7 +152,8 @@ const lenovo = {
 
     warrantyMonths: 24
     
-    documents: []
+    documents: [],
+    photos: []
 
 };
 
@@ -177,7 +179,8 @@ const bosch = {
 
     warrantyMonths: 24
     
-    documents: []
+    documents: [],
+    photos: []
 
 };
 
@@ -203,7 +206,8 @@ const samsung = {
 
     warrantyMonths: 24
     
-    documents: []
+    documents: [],
+    photos: []
 
 };
 

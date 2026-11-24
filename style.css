@@ -862,3 +862,31 @@ tr:hover{
         grid-template-columns:1fr;
     }
 }
+
+/* Detail.html - dokumenty vs. fotky */
+.attachments-layout{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    margin-top:15px;
+}
+
+#documents-column{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+#photos-column{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+
+.photo-thumb{
+    aspect-ratio:1;
+    border-radius:12px;
+    overflow:hidden;
+    border:1px solid var(--border);
+    background:#202b44;
+}

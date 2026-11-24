@@ -474,17 +474,28 @@ console.log(file);
             reader.onload =
                 function(e){
 
-                    item.documents.push({
+            const fileData = {
 
-                        id: Date.now(),
+                    id: Date.now(),
 
-                        name: file.name,
+                    name: file.name,
 
-                        type: file.type,
+                    type: file.type,
 
-                        data: e.target.result
+                    data: e.target.result
 
-                    });
+                };
+
+if(file.type.startsWith("image/")){
+
+    item.photos.push(fileData);
+
+}
+else{
+
+    item.documents.push(fileData);
+
+}
 
                     localStorage.setItem(
                         "assets",
@@ -507,28 +518,55 @@ console.log(file);
 
 function vykresliDokumenty(){
 
-    if(!item.documents ||
-       item.documents.length === 0){
+    const documentsColumn =
+        document.getElementById(
+            "documents-column"
+        );
 
-        documentsList.innerHTML = `
-            <p class="documents-empty">
-                Žádné dokumenty nejsou zatím připojené.
-            </p>
-        `;
+    const photosColumn =
+        document.getElementById(
+            "photos-column"
+        );
 
-        return;
-    }
-
-    documentsList.innerHTML = "";
+    documentsColumn.innerHTML = "";
+    photosColumn.innerHTML = "";
 
     item.documents.forEach(doc => {
 
-        documentsList.innerHTML += `
+        documentsColumn.innerHTML += `
+
             <div class="document-item">
 
                 📄 ${doc.name}
 
             </div>
+
         `;
+
     });
+
+    item.photos.forEach(photo => {
+
+        photosColumn.innerHTML += `
+
+            <div class="document-item">
+
+                🖼️ ${photo.name}
+
+            </div>
+
+        `;
+
+    });
+
+    if(
+        item.documents.length === 0 &&
+        item.photos.length === 0
+    ){
+
+        documentsColumn.innerHTML =
+            `<p class="documents-empty">
+                Žádné přílohy.
+            </p>`;
+    }
 }
