@@ -232,10 +232,17 @@ if(ulozenyMajetek){
     assets.forEach(asset => {
 
         if(!asset.documents){
-
             asset.documents = [];
         }
-    });
+
+        if(!asset.photos){
+            asset.photos = [];
+        }
+
+});
+
+ulozMajetek();
+
     
 else{
 

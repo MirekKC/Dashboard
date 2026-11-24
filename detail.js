@@ -32,6 +32,18 @@ const item =
         asset => asset.id === id
     );
 
+if(item){
+
+    if(!item.documents){
+        item.documents = [];
+    }
+
+    if(!item.photos){
+        item.photos = [];
+    }
+
+}
+
 // ======================================================
 // ODKAZY NA PRVKY
 // ======================================================
