@@ -193,11 +193,6 @@ function otevriDokument(id){
     `);
 }
 
-function otevriDokument(id){
-
-    ...
-}
-
 function smazDokument(id){
 
     item.documents =
