@@ -888,5 +888,11 @@ tr:hover{
     border-radius:12px;
     overflow:hidden;
     border:1px solid var(--border);
-    background:#202b44;
+}
+
+.photo-thumb img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }

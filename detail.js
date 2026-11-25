@@ -565,20 +565,16 @@ function vykresliDokumenty(){
 
 item.photos.forEach(photo => {
 
-    console.log(
-        "VYKRESLUJI FOTO:",
-        photo.name
-    );
-
     photosColumn.innerHTML += `
-        <div style="
-            color:white;
-            border:1px solid red;
-            padding:10px;
-            margin-bottom:10px;
-        ">
-            FOTO: ${photo.name}
+
+        <div class="photo-thumb">
+
+            <img
+                src="${photo.data}"
+                alt="${photo.name}">
+
         </div>
+
     `;
 
 });
