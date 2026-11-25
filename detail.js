@@ -563,19 +563,25 @@ function vykresliDokumenty(){
 
     });
 
-    item.photos.forEach(photo => {
+item.photos.forEach(photo => {
 
-        photosColumn.innerHTML += `
+    console.log(
+        "VYKRESLUJI FOTO:",
+        photo.name
+    );
 
-            <div class="document-item">
+    photosColumn.innerHTML += `
+        <div style="
+            color:white;
+            border:1px solid red;
+            padding:10px;
+            margin-bottom:10px;
+        ">
+            FOTO: ${photo.name}
+        </div>
+    `;
 
-                🖼️ ${photo.name}
-
-            </div>
-
-        `;
-
-    });
+});
 
     if(
         item.documents.length === 0 &&
