@@ -173,10 +173,24 @@ function otevriDokument(id){
         return;
     }
 
-    window.open(
-        dokument.data,
-        "_blank"
-    );
+    const noveOkno =
+        window.open();
+
+    noveOkno.document.write(`
+
+        <iframe
+            src="${dokument.data}"
+            width="100%"
+            height="100%"
+            style="
+                border:none;
+                position:fixed;
+                top:0;
+                left:0;
+            ">
+        </iframe>
+
+    `);
 }
 
 // ======================================================

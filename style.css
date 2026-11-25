@@ -898,9 +898,16 @@ tr:hover{
 }
 
 .document-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 12px;
+    border-radius:10px;
     cursor:pointer;
+    transition:.2s;
 }
 
 .document-item:hover{
-    border-color:var(--primary);
+    background:rgba(59,130,246,.15);
+    color:var(--primary);
 }
