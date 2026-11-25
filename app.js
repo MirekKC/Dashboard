@@ -228,7 +228,7 @@ if(ulozenyMajetek){
         JSON.parse(
             ulozenyMajetek
         );
-}
+
     assets.forEach(asset => {
 
         if(!asset.documents){
@@ -242,7 +242,7 @@ if(ulozenyMajetek){
 });
 
 ulozMajetek();
-
+}
     
 else{
 
@@ -541,7 +541,8 @@ if(saveButton){
                         : Number(
                             warrantyMonths
                         ),
-                documents: []
+                documents: [],
+                photos: []
 
             };
 
