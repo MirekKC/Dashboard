@@ -530,6 +530,12 @@ else{
 
 function vykresliDokumenty(){
 
+    console.log(
+        "VYKRESLUJI",
+        item.documents.length,
+        item.photos.length
+        );
+
     const documentsColumn =
         document.getElementById(
             "documents-column"
