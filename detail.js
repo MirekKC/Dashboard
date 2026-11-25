@@ -162,6 +162,23 @@ if(item){
 
 }
 
+function otevriDokument(id){
+
+    const dokument =
+        item.documents.find(
+            doc => doc.id === id
+        );
+
+    if(!dokument){
+        return;
+    }
+
+    window.open(
+        dokument.data,
+        "_blank"
+    );
+}
+
 // ======================================================
 // PŘEPNUTÍ DO EDITACE
 // ======================================================
@@ -553,13 +570,15 @@ function vykresliDokumenty(){
 
         documentsColumn.innerHTML += `
 
-            <div class="document-item">
+    <div
+        class="document-item"
+        onclick="otevriDokument(${doc.id})">
 
-                📄 ${doc.name}
+        📄 ${doc.name}
 
-            </div>
+    </div>
 
-        `;
+`;
 
     });
 

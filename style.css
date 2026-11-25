@@ -896,3 +896,11 @@ tr:hover{
     object-fit:cover;
     display:block;
 }
+
+.document-item{
+    cursor:pointer;
+}
+
+.document-item:hover{
+    border-color:var(--primary);
+}
