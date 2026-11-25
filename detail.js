@@ -193,6 +193,28 @@ function otevriDokument(id){
     `);
 }
 
+function otevriDokument(id){
+
+    ...
+}
+
+function smazDokument(id){
+
+    item.documents =
+        item.documents.filter(
+            doc => doc.id !== id
+        );
+
+    localStorage.setItem(
+        "assets",
+        JSON.stringify(
+            assets
+        )
+    );
+
+    vykresliDokumenty();
+}
+
 // ======================================================
 // PŘEPNUTÍ DO EDITACE
 // ======================================================
@@ -584,11 +606,22 @@ function vykresliDokumenty(){
 
         documentsColumn.innerHTML += `
 
-    <div
-        class="document-item"
-        onclick="otevriDokument(${doc.id})">
+    <div class="document-item">
 
-        📄 ${doc.name}
+        <span
+            onclick="otevriDokument(${doc.id})">
+
+            📄 ${doc.name}
+
+        </span>
+
+        <span
+            class="delete-document"
+            onclick="smazDokument(${doc.id})">
+
+            🗑
+
+        </span>
 
     </div>
 
