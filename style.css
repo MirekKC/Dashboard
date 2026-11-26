@@ -897,6 +897,12 @@ tr:hover{
     display:block;
 }
 
+.photo-preview{
+    max-width:90vw;
+    max-height:90vh;
+    border-radius:16px;
+}
+
 .document-item{
     display:flex;
     justify-content:space-between;

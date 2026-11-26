@@ -210,6 +210,47 @@ function smazDokument(id){
     vykresliDokumenty();
 }
 
+function otevriFotku(id){
+
+    const foto =
+        item.photos.find(
+            photo => photo.id === id
+        );
+
+    if(!foto){
+        return;
+    }
+
+    document.getElementById(
+        "photo-preview"
+    ).src = foto.data;
+
+    document.getElementById(
+        "photo-modal"
+    ).classList.remove(
+        "hidden"
+    );
+}
+
+const photoModal =
+    document.getElementById(
+        "photo-modal"
+    );
+
+if(photoModal){
+
+    photoModal.addEventListener(
+        "click",
+        function(){
+
+            photoModal.classList.add(
+                "hidden"
+            );
+
+        }
+    );
+}
+
 // ======================================================
 // PŘEPNUTÍ DO EDITACE
 // ======================================================
@@ -628,13 +669,15 @@ item.photos.forEach(photo => {
 
     photosColumn.innerHTML += `
 
-        <div class="photo-thumb">
+        <div
+            class="photo-thumb"
+            onclick="otevriFotku(${photo.id})">
 
             <img
                 src="${photo.data}"
                 alt="${photo.name}">
 
-        </div>
+</div>
 
     `;
 
