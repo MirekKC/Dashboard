@@ -915,9 +915,16 @@ tr:hover{
 
 .delete-document{
     cursor:pointer;
-    opacity:.7;
+    opacity:0;
+    transition:
+        opacity .2s ease,
+        color .2s ease;
+}
+
+.document-item:hover .delete-document{
+    opacity:1;
 }
 
 .delete-document:hover{
-    opacity:1;
+    color:var(--danger);
 }
