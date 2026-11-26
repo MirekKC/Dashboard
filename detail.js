@@ -232,6 +232,24 @@ function otevriFotku(id){
     );
 }
 
+function smazFotku(id){
+
+    item.photos =
+        item.photos.filter(
+            photo => photo.id !== id
+        );
+
+    localStorage.setItem(
+        "assets",
+        JSON.stringify(
+            assets
+        )
+    );
+
+    vykresliDokumenty();
+}
+
+
 const photoModal =
     document.getElementById(
         "photo-modal"
@@ -669,6 +687,8 @@ item.photos.forEach(photo => {
 
     photosColumn.innerHTML += `
 
+    <div class="photo-wrapper">
+
         <div
             class="photo-thumb"
             onclick="otevriFotku(${photo.id})">
@@ -677,9 +697,18 @@ item.photos.forEach(photo => {
                 src="${photo.data}"
                 alt="${photo.name}">
 
-</div>
+        </div>
 
-    `;
+        <span
+            class="delete-photo"
+            onclick="smazFotku(${photo.id})">
+
+            🗑
+
+        </span>
+
+    </div>
+`;
 
 });
 

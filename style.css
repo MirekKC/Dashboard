@@ -934,3 +934,35 @@ tr:hover{
 .delete-document:hover{
     color:var(--danger);
 }
+
+.photo-wrapper{
+    position:relative;
+}
+/* Koš v rohu fotky */
+.delete-photo{
+    position:absolute;
+    top:8px;
+    right:8px;
+
+    opacity:0;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+    background:rgba(15,23,42,.85);
+
+    padding:4px 6px;
+
+    border-radius:8px;
+}
+/* Zobrazení pøi hoveru */
+.photo-wrapper:hover .delete-photo{
+    opacity:1;
+}
+/* Zèervenání */
+.delete-photo:hover{
+    color:var(--danger);
+}
+
+
