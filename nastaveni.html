@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Domácí hlídač - Nastavení
+    </title>
+
+    <link rel="icon"
+          href="obrazky/pes.png">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            Domácí hlídač
+        </div>
+
+        <nav class="menu">
+
+            <a href="index.html">
+                Přehled
+            </a>
+
+            <a href="majetek.html">
+                Majetek
+            </a>
+
+            <a href="#">
+                Záruky
+            </a>
+
+            <a href="#">
+                Dokumenty
+            </a>
+
+            <a href="#">
+                Reklamace
+            </a>
+
+            <a href="#">
+                Kamery
+            </a>
+
+            <a href="nastaveni.html"
+               class="active">
+                Nastavení
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <main class="content">
+
+        <div class="header">
+
+            <h1>
+                Nastavení
+            </h1>
+
+            <div class="subtitle">
+                Správa aplikace a zálohování dat
+            </div>
+
+        </div>
+
+        <div class="detail-layout">
+
+            <div class="panel">
+
+                <h2>
+                    💾 Záloha dat
+                </h2>
+
+                <p class="settings-description">
+
+                    Exportujte kompletní databázi majetku,
+                    dokumentů a fotografií do souboru JSON.
+
+                </p>
+
+                <div class="settings-actions">
+
+                    <button id="export-data">
+
+                        Export dat
+
+                    </button>
+
+                    <button id="import-data">
+
+                        Import dat
+
+                    </button>
+
+                    <input
+                        type="file"
+                        id="import-file"
+                        hidden
+                        accept=".json">
+
+                </div>
+
+                <p id="last-backup">
+
+                    Poslední export:
+                    Neznámý
+
+                </p>
+
+            </div>
+
+            <div class="panel">
+
+                <h2>
+                    📊 Přehled dat
+                </h2>
+
+                <p>
+
+                    Počet položek:
+                    <strong id="asset-count">
+                        0
+                    </strong>
+
+                </p>
+
+                <p>
+
+                    Počet dokumentů:
+                    <strong id="document-count">
+                        0
+                    </strong>
+
+                </p>
+
+                <p>
+
+                    Počet fotografií:
+                    <strong id="photo-count">
+                        0
+                    </strong>
+
+                </p>
+
+                <p>
+
+                    Využití úložiště:
+                    <strong id="storage-size">
+                        0 kB
+                    </strong>
+
+                </p>
+
+            </div>
+
+            <div class="panel">
+
+                <h2>
+                    ℹ️ O aplikaci
+                </h2>
+
+                <p>
+
+                    Název:
+                    <strong>
+                        Domácí hlídač
+                    </strong>
+
+                </p>
+
+                <p>
+
+                    Verze:
+                    <strong>
+                        1.0
+                    </strong>
+
+                </p>
+
+                <p>
+
+                    Účel:
+                    Evidence majetku,
+                    dokumentů, fotografií
+                    a záruk.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="nastaveni.js"></script>
+
+</body>
+
+</html>
