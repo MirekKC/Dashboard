@@ -239,6 +239,14 @@ function smazFotku(id){
             photo => photo.id !== id
         );
 
+    console.log(
+        "Photo size:",
+        Math.round(
+            compressed.length / 1024
+        ),
+        "kB"
+    );
+
     localStorage.setItem(
         "assets",
         JSON.stringify(
@@ -701,7 +709,20 @@ console.log(file);
 
 if(file.type.startsWith("image/")){
 
-    item.photos.push(fileData);
+    const compressed =
+        await zmensiObrazek(file);
+
+    item.photos.push({
+
+        id: Date.now(),
+
+        name: file.name,
+
+        type: file.type,
+
+        data: compressed
+
+    });
 
 }
 
