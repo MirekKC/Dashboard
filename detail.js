@@ -572,6 +572,100 @@ if(addDocumentButton){
     );
 }
 
+// ======================================================
+// Komprese obrázků
+// ======================================================
+
+
+async function zmensiObrazek(file){
+
+    return new Promise((resolve) => {
+
+        const reader =
+            new FileReader();
+
+        const img =
+            new Image();
+
+        reader.onload = async function(e){
+
+            img.src =
+                e.target.result;
+        };
+
+        img.onload = function(){
+
+            const canvas =
+                document.createElement(
+                    "canvas"
+                );
+
+            let width =
+                img.width;
+
+            let height =
+                img.height;
+
+            const maxSize = 1600;
+
+            if(width > height){
+
+                if(width > maxSize){
+
+                    height =
+                        height *
+                        (maxSize / width);
+
+                    width =
+                        maxSize;
+                }
+            }
+            else{
+
+                if(height > maxSize){
+
+                    width =
+                        width *
+                        (maxSize / height);
+
+                    height =
+                        maxSize;
+                }
+            }
+
+            canvas.width =
+                width;
+
+            canvas.height =
+                height;
+
+            const ctx =
+                canvas.getContext(
+                    "2d"
+                );
+
+            ctx.drawImage(
+                img,
+                0,
+                0,
+                width,
+                height
+            );
+
+            resolve(
+                canvas.toDataURL(
+                    "image/jpeg",
+                    0.8
+                )
+            );
+        };
+
+        reader.readAsDataURL(
+            file
+        );
+    });
+}
+
 if(documentUpload){
 
     documentUpload.addEventListener(
@@ -607,9 +701,23 @@ console.log(file);
 
 if(file.type.startsWith("image/")){
 
-    item.photos.push(fileData);
+    const compressed =
+        await zmensiObrazek(file);
+
+    item.photos.push({
+
+        id: Date.now(),
+
+        name: file.name,
+
+        type: file.type,
+
+        data: compressed
+
+    });
 
 }
+
 else{
 
     item.documents.push(fileData);
