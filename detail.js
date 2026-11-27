@@ -701,20 +701,7 @@ console.log(file);
 
 if(file.type.startsWith("image/")){
 
-    const compressed =
-        await zmensiObrazek(file);
-
-    item.photos.push({
-
-        id: Date.now(),
-
-        name: file.name,
-
-        type: file.type,
-
-        data: compressed
-
-    });
+    item.photos.push(fileData);
 
 }
 
