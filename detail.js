@@ -709,18 +709,29 @@ console.log(file);
 
 if(file.type.startsWith("image/")){
 
-    const compressed =
-        await zmensiObrazek(file);
+    zmensiObrazek(file)
+    .then(compressed => {
 
-    item.photos.push({
+        item.photos.push({
 
-        id: Date.now(),
+            id: Date.now(),
 
-        name: file.name,
+            name: file.name,
 
-        type: file.type,
+            type: file.type,
 
-        data: compressed
+            data: compressed
+
+        });
+
+        localStorage.setItem(
+            "assets",
+            JSON.stringify(
+                assets
+            )
+        );
+
+        vykresliDokumenty();
 
     });
 
