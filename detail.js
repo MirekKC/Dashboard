@@ -711,6 +711,11 @@ if(file.type.startsWith("image/")){
 
     zmensiObrazek(file)
     .then(compressed => {
+    
+console.log(
+    "KOMPRESOVANO",
+    compressed.length
+);
 
         item.photos.push({
 
